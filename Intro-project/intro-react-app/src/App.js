@@ -5,6 +5,10 @@ import Employee from './Employee';
 import NewCounter from './NewCounter';
 import React, { useState } from 'react';
 import TodoList from './TodoList';
+import { Switch, Route, useHistory, Link } from 'react-router-dom';
+import Page1 from './Page1';
+import Page2 from './Page2';
+import Page3 from './Page3';
 
 function App() {
 
@@ -30,6 +34,8 @@ function App() {
   // 4
   const [showCounter, setShowCounter] = useState(false);
 
+  // 7
+  const history = useHistory();
 
   return (
     <div className="App">
@@ -63,7 +69,32 @@ function App() {
           <button onClick={()=> setShowCounter(!showCounter)}>{showCounter ? "Hide Counter" : "Show Counter"}</button>
           {showCounter && <NewCounter/>} */}
 
-          <TodoList/>
+          {/* (6)
+          <TodoList/> */}
+
+          <div>
+            {/* <button onClick={()=> history.push("/page1")}>Page 1</button>
+            <button onClick={()=> history.push("/page2")}>Page 2</button>
+            <button onClick={()=> history.push("/page3")}>Page 3</button> */}
+            <Link to="/page1">Page 1</Link>
+            <Link to="/page2">Page 2</Link>
+            <Link to="/page3">Page 3</Link>
+          </div>
+
+          <Switch>
+            <Route path="/page1">
+              <Page1/>
+            </Route>
+
+            <Route path="/page2">
+              <Page2/>
+            </Route>
+
+            <Route path="/page3">
+              <Page3/>
+            </Route>
+          </Switch>
+
       </header>
     </div>
   )
