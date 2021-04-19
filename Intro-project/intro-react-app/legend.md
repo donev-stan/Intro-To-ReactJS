@@ -9,3 +9,7 @@
 
 4. The React Lifecycle of a Functional Component
     - NewCounter.jsx
+
+5. UseEffect Hook
+
+6. useEffect with API Requests
