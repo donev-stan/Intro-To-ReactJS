@@ -2,9 +2,12 @@ import './App.css';
 import Documentation from './Documentation';
 import Counter from './Counter';
 import Employee from './Employee';
+import NewCounter from './NewCounter';
+import React, { useState } from 'react';
 
 function App() {
 
+  // 3
   const employeeInfo = [
     {
       name: 'Stan',
@@ -23,6 +26,10 @@ function App() {
     }
   ];
 
+  // 4
+  const [showCounter, setShowCounter] = useState(false);
+
+
   return (
     <div className="App">
       <header className="App-header">
@@ -37,10 +44,23 @@ function App() {
           <Employee name="Martin"/>
           <Employee name="Dobry"/> */}
 
+          {/* (3)
+          {employeeInfo.map(employee => {
+            const {name, age: employeeAge} = employee;
+
+            return (
+                <div>
+                    <p>This is an Employee, {name} - {employeeAge} </p>
+                </div>
+            )
+          })} */}
 
           {/* {employeeInfo.map(({name, age}) => <Employee name={name} age={age}/> )} */}
-          {employeeInfo.map(employee => <Employee key={employee['employee_id']} {...employee}/> )}
+          {/* {employeeInfo.map(employee => <Employee key={employee['employee_id']} {...employee}/> )} */}
 
+
+          <button onClick={()=> setShowCounter(!showCounter)}>{showCounter ? "Hide Counter" : "Show Counter"}</button>
+          {showCounter && <NewCounter/>}
       </header>
     </div>
   )

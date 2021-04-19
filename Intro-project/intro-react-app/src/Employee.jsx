@@ -5,7 +5,7 @@ const Employee = (props) => {
 
     const {name, age: employeeAge} = props;
 
-
+    
     return (
         <div>
             <p>This is an Employee, {props.name} - {employeeAge} </p>

@@ -6,3 +6,6 @@
 
 3. Props, Destructuring & Spreading
     - Employee.jsx
+
+4. The React Lifecycle of a Functional Component
+    - NewCounter.jsx
