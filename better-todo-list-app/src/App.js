@@ -1,5 +1,6 @@
 import Header from './components/Header';
 
+
 function App() {
 
 
@@ -7,8 +8,7 @@ function App() {
 
   return (
     <div className="container">
-      <Header title="Hello"></Header>
-      <h1>Hello from react</h1> 
+      <Header title="Task Tracker"></Header>
     </div>
   );
 }
