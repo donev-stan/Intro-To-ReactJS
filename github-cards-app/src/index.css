@@ -2,16 +2,16 @@
 	margin: 1rem;
 }
 
-img {
+.github-profile img {
   width: 75px;
 }
 
-.info {
+.github-profile .info {
   display: inline-block;
   margin-left: 12px;
 }
 
-.name {
+.github-profile .info .name {
   font-size: 1.25rem;
   font-weight: bold;
 }
