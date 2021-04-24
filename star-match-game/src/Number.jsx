@@ -1,10 +1,19 @@
 import React from "react";
 
-const Number = ({number}) => {
+// Color Theme
+const colors = {
+    available: "lightgray",
+    used: "lightgreen",
+    wrong: "lightcoral",
+    candidate: "deepskyblue",
+};
+
+const Number = ({ number, status, onClick }) => {
     return (
-        <button 
+        <button
             className="number"
-            onClick={()=> console.log(number)}>
+            onClick={() => onClick(number, status)}
+            style={{ backgroundColor: colors[status] }}>
             {number}
         </button>
     );
