@@ -12,8 +12,8 @@ const Number = ({ number, status, onClick }) => {
     return (
         <button
             className="number"
-            onClick={() => onClick(number, status)}
-            style={{ backgroundColor: colors[status] }}>
+            style={{ backgroundColor: colors[status] }}
+            onClick={() => onClick(number, status)}>
             {number}
         </button>
     );
