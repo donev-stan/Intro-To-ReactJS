@@ -3,6 +3,7 @@ import utils from "./Utils";
 import { useState } from "react";
 import Number from './Number';
 import Stars from './Stars';
+import PlayAgain from './PlayAgain';
 
 function App() {
     const [stars, setStars] = useState(utils.random(1, 9));
@@ -10,16 +11,17 @@ function App() {
     const [candidateNums, setCandidateNums] = useState([]);
 
     const candidatesAreWrong = utils.sum(candidateNums) > stars;
+    const gameOver = availableNums.length === 0;
+
+    const resetGame = () => {
+      setStars(utils.random(1, 9));
+      setAvailableNums(utils.range(1, 9));
+      setCandidateNums([]);
+    }
 
     const numberStatus = (number) => {
-      if (availableNums.includes(number) === false) {
-        return 'used';
-      }
-
-      if (candidateNums.includes(number)) {
-        return candidatesAreWrong ? 'wrong' : 'candidate';
-      }
-
+      if (availableNums.includes(number) === false) return 'used';
+      if (candidateNums.includes(number)) return candidatesAreWrong ? 'wrong' : 'candidate';
       return 'available';
     }
 
@@ -52,7 +54,11 @@ function App() {
             
             <div className="body">
                 <div className="left">
+                  {gameOver ? (
+                    <PlayAgain onClick={resetGame} />
+                  ) : (
                     <Stars starsCount={stars} />
+                  )}
                 </div>
 
                 <div className="right">
