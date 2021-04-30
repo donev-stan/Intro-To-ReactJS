@@ -1,8 +1,7 @@
-import "./UsersList.css";
 import { React, useState, useEffect } from "react";
 import { getAllUsers } from "../../../utils/services/UsersService";
 import UserCard from "../user-card/UserCard";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 
 const UsersList = () => {
     const [users, setUsers] = useState([]);

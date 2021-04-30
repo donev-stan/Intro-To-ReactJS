@@ -1,4 +1,3 @@
-import React from 'react'
 
 const Footer = () => {
     return (
@@ -9,8 +8,6 @@ const Footer = () => {
 }
 
 const styles = {
-    position: 'fixed',
-    bottom: 0,
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
