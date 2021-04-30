@@ -1,12 +1,26 @@
-import React from 'react'
-import './UsersList.css'
+import "./UsersList.css";
+import { React, useState, useEffect } from "react";
+import { getAllUsers } from "../../../utils/services/UsersService";
+import UserCard from "../user-card/UserCard";
+import { Container, Row, Col } from "react-bootstrap";
 
 const UsersList = () => {
-    return (
-        <div className='users-list-wrapper'>
-            Users List Works!
-        </div>
-    )
-}
+    const [users, setUsers] = useState([]);
 
-export default UsersList
+    useEffect(async () => {
+        const data = await getAllUsers();
+        setUsers(data);
+    }, []);
+
+    return (
+        <Container>
+            <Row>
+                {users.map((user) => (
+                    <UserCard user={user} key={user.id} />
+                ))}
+            </Row>
+        </Container>
+    );
+};
+
+export default UsersList;
