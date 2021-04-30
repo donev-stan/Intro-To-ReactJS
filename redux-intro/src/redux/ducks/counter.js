@@ -11,7 +11,7 @@ export const decrement = () => ({
 
 
 const initialState = {
-    count: 3
+    count: 0
 };
 
 export default (state = initialState, action) => {
