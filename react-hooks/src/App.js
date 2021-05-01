@@ -1,10 +1,10 @@
 import './App.css';
-import UseState from './hooks/UseState';
+import UseStateHook from './hooks/UseStateHook';
 
 function App() {
   return (
     <div className="App">
-      <UseState />
+      <UseStateHook />
     </div>
   );
 }
