@@ -1,10 +1,10 @@
 import './App.css';
-import UseStateHook from './hooks/UseStateHook';
+import HooksMenu from './HooksMenu';
 
 function App() {
   return (
     <div className="App">
-      <UseStateHook />
+      <HooksMenu />
     </div>
   );
 }

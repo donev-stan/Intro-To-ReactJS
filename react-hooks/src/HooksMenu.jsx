@@ -1,4 +1,5 @@
-import UseStateHook from './hooks/UseStateHook'
+import UseStateHook from "./hooks/UseStateHook";
+import { Link } from "react-router-dom";
 
 const HooksMenu = () => {
     return (
@@ -9,7 +10,7 @@ const HooksMenu = () => {
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default HooksMenu
+export default HooksMenu;
