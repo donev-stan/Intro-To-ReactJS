@@ -11,10 +11,21 @@
 
 
 # useMemo Hook
-- Caching vlaues
+- Caching vlaues.
 
-- Better performance
+- Better performance.
 
-- Every memo hook is saved on the memory so can't be used everywhere
+- Every memo hook is saved on the memory so can't be used everywhere.
 
-- Updating state in react will rerender the entire component
+- Updating state in react will rerender the entire component.
+
+
+# useRef Hook
+- Similar to useState (presists between renders of the component).
+
+- DIFFERENCE: useRef doesn't cause the component to rerender when it gets changed unlike useState.
+
+- To reference elements inside html. Each element has ref attribute
+
+
+

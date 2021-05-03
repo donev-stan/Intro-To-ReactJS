@@ -32,6 +32,17 @@ const HooksMenu = () => {
                     </Link>
                 </div>
             </div>
+            
+            <div className="row shadow-lg p-3">
+                <div className="col">
+                    <Link to="/useRefHook">
+                    <h2>useRef</h2>
+                        {/* <button type="button" className="btn btn-info">
+                            useMemoHook
+                        </button> */}
+                    </Link>
+                </div>
+            </div>
         </div>
     );
 };
