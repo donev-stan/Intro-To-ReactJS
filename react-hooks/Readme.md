@@ -3,4 +3,9 @@
 
 - Must execute in the same order (e.g. Cannot be put inside if checks, functions, loops or nested. Cannot be called conditionally)
 
-- 
+
+# useEffect Hook
+- For side effects.
+
+
+# useMemo Hook
