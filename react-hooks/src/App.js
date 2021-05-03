@@ -3,6 +3,7 @@ import HooksMenu from './HooksMenu';
 import { Switch, Route } from 'react-router-dom';
 import UseStateHook from './hooks/UseStateHook';
 import UseEffectHook from './hooks/UseEffectHook';
+import UseMemoHook from './hooks/UseMemoHook';
 
 function App() {
   return (
@@ -17,6 +18,10 @@ function App() {
 
       <Switch>
         <Route path='/useEffectHook'> <UseEffectHook/> </Route>
+      </Switch>
+
+      <Switch>
+        <Route path='/useMemoHook'> <UseMemoHook/> </Route>
       </Switch>
 
     </div>
