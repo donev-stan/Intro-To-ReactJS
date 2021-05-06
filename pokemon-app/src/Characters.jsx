@@ -6,11 +6,9 @@ export default function Pokemons({ character }) {
             <div className="row justify-content-center my-5">
                 {character.map((c) => (
                     <div className="card text-center m-2" style={{width: '18rem'}}>
+                         <img src={`${c.image}`} class="card-img-top" />
                         <div className="card-body">
-                            <h5 className="card-title"> {c} </h5>
-                            <a href="#" className="btn btn-primary">
-                                See more!
-                            </a>
+                            <h5 className="card-title"> {c.name} </h5>
                         </div>
                     </div>
                 ))}
