@@ -5,12 +5,14 @@ import { Container, Row } from "react-bootstrap";
 
 const UsersList = () => {
     const [users, setUsers] = useState([]);
+    console.log('I am here');
 
     useEffect(() => {
-        getAllUsers().then(response => {
-            setUsers(response.data);
-        })
-    }, []);
+      getAllUsers().then(response => {
+          setUsers(response.data);
+      });
+  }, []);
+
 
     return (
         <Container>
