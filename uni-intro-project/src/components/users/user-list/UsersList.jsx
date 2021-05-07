@@ -6,9 +6,10 @@ import { Container, Row } from "react-bootstrap";
 const UsersList = () => {
     const [users, setUsers] = useState([]);
 
-    useEffect(async () => {
-        const data = await getAllUsers();
-        setUsers(data);
+    useEffect(() => {
+        getAllUsers().then(response => {
+            setUsers(response.data);
+        })
     }, []);
 
     return (
