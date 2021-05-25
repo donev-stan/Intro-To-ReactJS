@@ -1,7 +1,9 @@
+import { Layout } from './components/layout/Layout';
+
 function App() {
   return (
-    <div className="App">
-     
+    <div className="container-fluid">
+      <Layout />
     </div>
   );
 }
