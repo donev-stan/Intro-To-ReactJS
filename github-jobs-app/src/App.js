@@ -1,8 +1,13 @@
+import React, {useState} from 'react'
 import useFetchJobs from "./useFetchJobs"
 import { Container } from 'react-bootstrap'
 
 function App() {
+  
   const {jobs, loading, error} = useFetchJobs()
+  const [params, setParams] = useState({})
+  const [page, setPage] = useState(1)
+
   return (
     <Container>
       { loading && <h1>Loading...</h1> }
