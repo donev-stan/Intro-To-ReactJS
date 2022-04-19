@@ -3,7 +3,7 @@ import { createMuiTheme } from "@material-ui/core";
 const primary = "#18E1D9";
 const secondary = "#0B0B15";
 
-export default createMuiTheme({
+export default createMuiTheme({ // returns a theme we gonna use in the ThemeProvider
   typography: {
     fontFamily: "Poppins, sans-serif",
   },
@@ -15,7 +15,7 @@ export default createMuiTheme({
       main: secondary,
     },
   },
-  overrides: {
+  overrides: { // overrides css styling of some material ui library component
     MuiDialogActions: {
       root: {
         padding: "8px 24px 16px 24px",
