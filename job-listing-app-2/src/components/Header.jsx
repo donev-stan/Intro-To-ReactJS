@@ -1,9 +1,22 @@
-import React from 'react'
+import React from "react";
 
-const Header = () => {
+const Header = ({ keywords, removeKeywords, clearAll }) => {
   return (
-    <div>Header</div>
-  )
-}
+    <div className="header-container">
+      {keywords.map((key, id) => {
+        return (
+          <>
+            <button onClick={() => removeKeywords(key)} key={id}>
+              {" "}
+              {key}{" "}
+            </button>
 
-export default Header
+            <button onClick={clearAll}> Clear All Filters </button>
+          </>
+        );
+      })}
+    </div>
+  );
+};
+
+export default Header;
